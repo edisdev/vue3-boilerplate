@@ -1,4 +1,4 @@
-export default function icon (key = 'opts') {
+export default function icon (key:string = 'opts') {
   return {
     computed: {
       [key] () {

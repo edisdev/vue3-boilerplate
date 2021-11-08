@@ -13,10 +13,11 @@
   </svg>
 </template>
 
-<script>
+<script lang="ts">
 import icon from '@/mixins/icon'
+import { defineComponent } from 'vue'
 
-export default {
+export default defineComponent({
   mixins: [icon()],
   data () {
     return {
@@ -27,5 +28,5 @@ export default {
       }
     }
   }
-}
+})
 </script>

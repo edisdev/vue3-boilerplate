@@ -2,8 +2,10 @@
   <component :is='`Icon${name}`' :options='$attrs'/>
 </template>
 
-<script>
-export default {
+<script lang="ts">
+import { defineComponent } from 'vue'
+
+export default defineComponent({
   props: {
     /**
      * Which Icon ? Icon Name
@@ -13,5 +15,5 @@ export default {
       required: true
     }
   }
-}
+})
 </script>

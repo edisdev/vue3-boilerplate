@@ -1,5 +1,7 @@
-export const generateTemplate = (component) => {
-  return (args) => {
+import { VueElement } from '@vue/test-utils/dist/types'
+
+export const generateTemplate = (component: VueElement) => {
+  return (args: Object) => {
     return {
       data () {
         return {
@@ -13,7 +15,7 @@ export const generateTemplate = (component) => {
   }
 }
 
-export const getTemplate = (component) => {
+export const getTemplate = (component: VueElement) => {
   const Template = generateTemplate(component)
   return Template.bind({})
 }

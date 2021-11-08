@@ -4,17 +4,19 @@
     <span>{{ example }}</span>
   </div>
 </template>
-<script>
-import { computed } from 'vue'
+<script lang="ts">
+import { defineComponent } from 'vue'
 import { useStore } from 'vuex'
 // @ is an alias to /src
-export default {
-  name: 'Home',
+export default defineComponent({
+  name: 'About',
   setup () {
     const store = useStore()
+
+    console.log(store)
     return {
-      example: computed(() => store.getters['example/example'])
+      example: []
     }
   }
-}
+})
 </script>

@@ -7,10 +7,19 @@ const requires = require.context(
   /.vue$/
 )
 
-const icons = getComponents(requires, 'Icon')
+const componentRequires = require.context(
+  '@/components',
+  false,
+  /.vue$/
+)
 
-icons.forEach(icon => {
-  app.component(icon.name, icon.component)
+const icons = getComponents(requires, 'Icon')
+const components = getComponents(componentRequires)
+
+const allComponents = [...icons, ...components]
+
+allComponents.forEach(component => {
+  app.component(component.name, component.component)
 })
 
 export const parameters = {

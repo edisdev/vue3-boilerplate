@@ -6,6 +6,7 @@ module.exports = {
     "../src/**/*.stories.js"
   ],
   "addons": [
+    '@storybook/preset-typescript',
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
